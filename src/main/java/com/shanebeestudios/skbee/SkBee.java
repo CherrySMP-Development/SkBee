@@ -66,6 +66,10 @@ public class SkBee extends JavaPlugin {
         registerCommand("skbee", new SkBeeInfo(this));
         SkBeeMetrics.loadMetrics(this, this.properlyEnabled, skBeeVersion);
 
+        if (Util.IS_RUNNING_FOLIA) {
+            getLogger().severe("Folia support is extremely experimental. Stability is not guaranteed.");
+        }
+
         // Beta check + notice
         if (skBeeVersion.toString().contains("-")) {
             Util.log("&eThis is a BETA build, things may not work as expected, please report any bugs on GitHub");
