@@ -86,7 +86,7 @@ tasks {
         options.compilerArgs.add("-Xlint:deprecation")
     }
     shadowJar {
-        archiveFileName = project.name + "-" + projectVersion + ".jar"
+        archiveFileName = project.name + "-" + projectVersion + "-folia.jar"
         archiveClassifier.set("")
         manifest.attributes["Main-Class"] = "com.shanebeestudios.skbee.game.GamesMain"
         relocate("de.tr7zw.changeme.nbtapi", "com.shanebeestudios.skbee.api.nbt")
